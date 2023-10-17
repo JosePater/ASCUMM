@@ -1,5 +1,5 @@
 // import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { NavLinks } from './NavLinks';
 import Logo from '../../assets/favicon.png';
 import { useState } from 'react';
@@ -11,7 +11,7 @@ export const Navbar = () => {
     <nav className="bg-white">
       <div className="flex items-center font-medium justify-around">
         <div className="z-50 pt-1 md:w-auto w-full flex justify-between">
-          <img src={Logo} alt="logo" className="md:cursor-pointer h-20" />
+          <img src={Logo} alt="logo" className="md:cursor-pointer h-14" />
 
           <div className="text-5xl md:hidden m-2">
             <ion-icon
@@ -23,9 +23,7 @@ export const Navbar = () => {
 
         <ul className="md:flex hidden items-center uppercase gap-8 ">
           <li>
-            <Link to={'/'} className="py-5 px-3 inline-block">
-              Inicio
-            </Link>
+            <NavLink to={'/'} className="py-3 px-3 inline-block" />
           </li>
           <NavLinks />
         </ul>
@@ -36,9 +34,7 @@ export const Navbar = () => {
           duration-500 ${openMenu ? 'left-0' : 'left-[-100%]'}`}
         >
           <li>
-            <Link to={'/'} className="py-5 px-3 inline-block">
-              Inicio
-            </Link>
+            <NavLink to={'/'} className="py-5 px-3 inline-block" />
             <NavLinks />
           </li>
         </ul>
