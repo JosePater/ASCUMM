@@ -12,6 +12,7 @@ export const NavLinks = () => {
     },
     {
       name: 'Quiénes somos',
+      link: '/nosotros',
       isSubmenu: true,
       sublinks: [
         {
@@ -25,6 +26,7 @@ export const NavLinks = () => {
     },
     {
       name: 'Proyectos',
+      link: '/proyectos',
       isSubmenu: true,
       sublinks: [
         {
