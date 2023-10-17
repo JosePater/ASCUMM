@@ -1,7 +1,20 @@
+// Importar dependencias para rutas (Component = element)
+import { BrowserRouter, Router, Routes, Route } from 'react-router-dom';
+import { Navbar } from './components/nav/Navbar';
+import Portada from './assets/portada.jpg';
+
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold">Página Base React + tailwindcss</h1>
+      <BrowserRouter>
+        <Navbar>
+          <Routes>
+            <Router path="/" />
+            <Router path="/proyectos" />
+          </Routes>
+        </Navbar>
+      </BrowserRouter>
+      <img src={Portada} alt="Logo" />
     </>
   );
 }
