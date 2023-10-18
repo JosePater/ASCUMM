@@ -18,8 +18,8 @@ export const NavLinks = () => {
         {
           Head: 'Nosotros',
           sublink: [
-            { name: 'Misión', link: '/nosotros/mision' },
-            { name: 'Visión', link: '/nosotros/vision' },
+            { name: 'Misión', link: '/nosotros' },
+            { name: 'Visión', link: '/nosotros' },
           ],
         },
       ],
@@ -87,11 +87,11 @@ export const NavLinks = () => {
             {item.isSubmenu && (
               <div>
                 {/* ____________ Submenu Web____________ */}
-                <div className="absolute top-20 hidden group-hover:md:block hover:md:block">
+                <div className="absolute top-20 hidden group-hover:md:block hover:md:block z-10">
                   <div>
-                    <div className="bg-gray-200 w-6 h-6 left-3 absolute -mt-9 rotate-45"></div>
+                    <div className="bg-green-300 w-6 h-6 left-3 absolute -mt-9 rotate-45"></div>
                   </div>
-                  <div className="bg-gray-200 p-5 grid grid-cols-1 gap-10 -mt-6">
+                  <div className="bg-green-300 p-5 grid grid-cols-1 gap-10 -mt-6">
                     {item.sublinks.map((mysublinks, j) => (
                       <div key={j}>
                         <h1 className="text-lg font-semibold flex item">
@@ -99,7 +99,7 @@ export const NavLinks = () => {
                         </h1>
                         {mysublinks.sublink.map((submenu, k) => (
                           <div key={k}>
-                            <li className="text-sm text-gray-600 my-2.5">
+                            <li className="text-sm text-gray-700 my-2.5">
                               <Link
                                 to={submenu.link}
                                 className="hover:text-primary hover:font-bold"

@@ -30,7 +30,7 @@ export const Navbar = () => {
 
         {/* Mobile nav */}
         <ul
-          className={`md:hidden bg-white absolute w-full h-full bottom-0 py-24 pl-4 
+          className={`md:hidden bg-white absolute w-full h-full bottom-0 py-24 pl-4 z-10
           duration-500 ${openMenu ? 'left-0' : 'left-[-100%]'}`}
         >
           <li>
